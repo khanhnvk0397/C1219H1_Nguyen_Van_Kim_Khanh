@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e9a2eba-0e95-4f5c-b5d2-4d568089e8f8" name="Default Changelist" comment="Bai Tap Demo">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/C1219H1_Nguyen_Van_Kim_Khanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VPiwQ2JjC5PeUInRBV4dwpvig4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Bài Tập/ChuyenDo" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e9a2eba-0e95-4f5c-b5d2-4d568089e8f8" name="Default Changelist" comment="" />
+      <created>1577161368063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577161368063</updated>
+      <workItem from="1577161369398" duration="1283000" />
+    </task>
+    <task id="LOCAL-00001" summary="Bai Tap Demo">
+      <created>1577163026789</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577163026789</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Bai Tap Demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bai Tap Demo" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="350" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577162158950">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="350" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1577162158950" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577163319321">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1577163319321" />
+    <state x="46" y="127" key="Vcs.Push.Dialog.v2" timestamp="1577163033285">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="46" y="127" key="Vcs.Push.Dialog.v2/0.23.1280.726@0.23.1280.726" timestamp="1577163033285" />
+    <state x="229" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577162917532">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="229" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.726@0.23.1280.726" timestamp="1577162917532" />
+  </component>
+</project>
