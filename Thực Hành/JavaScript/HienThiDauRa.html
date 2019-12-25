@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<!--Dung ham alert()-->
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage() {
+        alert('Xin Chao!')
+    }
+</script>
+<!--hien thi qua the HTML-->
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+    }
+</script>
+<!--dung ham document.write()-->
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        console.log('Xin chào!');
+    }
+</script>
+
+</body>
+</html>
