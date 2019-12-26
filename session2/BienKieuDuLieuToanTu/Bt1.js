@@ -1,0 +1,11 @@
+let diemToan = parseInt(prompt("Nhap diem toan:   "));
+document.write("diem Toan:" +diemToan);
+document.write("<br>");
+let diemLy = parseInt(prompt("Nhap diem Ly:   "));
+document.write("diem Ly:" +diemLy);
+document.write("<br>");
+let diemHoa = parseInt(prompt("Nhap diem Hoa:   "));
+document.write("diem Hoa:" +diemHoa);
+document.write("<br>");
+let diemTb = (diemToan+diemLy+diemHoa)/3;
+document.write("Diem Trung Binh:" +diemTb);
