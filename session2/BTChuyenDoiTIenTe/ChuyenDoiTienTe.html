@@ -8,18 +8,39 @@
 <form>
     <h1>Chuyen Doi Tien Te</h1>
    Amount
-    <input id="demo" type="number">
+    <input id="amount" type="text"><br>
     From Currency
-    <select name="frCurrency">
-        <option value="vietnam">Viet Nam</option>
-    </select>
+    <select name="frCurrency" id="frCurrency">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select><br>
     To Currency
-    <select name="toCurrency">
-        <option value="usd">USD</option>
-    </select>
-    <button type="button" onclick="myFunction()" >convert</button>
+    <select name="toCurrency" id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select><br>
+
+    <button type="button" onclick="myFunction()" >convert</button><br>
+    <p id="result"> Result:</p>
 
 </form>
-<scrip src="MyJS.js"></scrip>
+<script>
+    function  myFunction() {
+        let amount = document.getElementById('amount').value;
+        let frCurrency = document.getElementById('frCurrency').value;
+        let toCurrency = document.getElementById('toCurrency').value;
+        let result = document.getElementById('result');
+        if (frCurrency =='VND' && toCurrency == 'USD') {
+            result.innerText = amount / 23000;
+
+        }
+        if (frCurrency =='USD' && toCurrency == 'VND')
+        {
+            result.innerText = amount * 23000;
+        }
+
+
+    }
+</script>
 </body>
 </html>
