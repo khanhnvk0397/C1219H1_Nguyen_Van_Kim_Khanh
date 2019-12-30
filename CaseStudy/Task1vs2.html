@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameCustomer = prompt("Enter name Customer:");
+    let idCard = prompt("Enter Id Card Customer: ");
+    let birthdayCustomer = prompt("Enter birth Customer (dd/MM/YYYY) : ");
+    let emailCustomer = prompt("Enter Email Customer: ");
+    let addressCustomer = prompt("Enter address Customer: ");
+    let typeCustomer = prompt("Enter type Customer: ");
+    let discount = prompt("Enter Discount: ");
+    let pax = prompt("Enter Number of people: ");
+    let typeRoom = prompt("Enter Type Room: ");
+    let rentDays = prompt("Enter Rent Day: ");
+    let roomClass = prompt("Enter room class: ");
+    let totalPay;
+    if (typeRoom =='Villa'){
+
+        totalPay = 500 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+    }
+    if (typeRoom == "Home"){
+        totalPay = 300 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+    }
+    if (typeRoom == "Room"){
+        totalPay = 100 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+    }
+    alert("Information Of Customer: \n" +
+        "Name: " + nameCustomer +
+        "Id Card: " + idCard +
+        "\n Birthday: " + birthdayCustomer +
+        "\n Email Customer:  " + emailCustomer +
+        "\n Address Customer: " +addressCustomer +
+        "\n Type Customer: " + typeCustomer +
+        "\n Discount: " + discount +
+        "\n Number of people: " + pax +
+        "\n Type Room: " + typeRoom +
+        "\n Rent Days: " + rentDays +
+        "\n Type Service: " + roomClass +
+        "\n Total Pay: " + totalPay
+
+    )
+
+</script>
+</body>
+</html>
