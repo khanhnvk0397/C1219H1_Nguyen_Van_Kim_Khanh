@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Month: <input id="month"  type="text" >
+<button type="button" onclick="tinhSoNgay()">Tinh So Ngay</button>
+<p id="ketQua">Result: </p>
+<script>
+
+    function tinhSoNgay() {
+        let month = document.getElementById('month').value;
+
+        let ketQua = document.getElementById('ketQua');
+        switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12:
+                ketQua.innerText = "Thang nay co 30 ngay";
+                break;
+            case 4, 6, 9, 11:
+                ketQua.innerText= "Thang nay co 30 ngay";
+                break;
+            case 2:
+                ketQua.innerText = "Thang nay co 28 hoac 29 ngay";
+                break;
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

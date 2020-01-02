@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input id="ketQua" type="text" ><br>
+<button type="button" value="1" onclick="myFunction(value)">1</button>
+<button type="button" value="2" onclick="myFunction(value)">2</button>
+<button type="button" value="3" onclick="myFunction(value)">3</button>
+<button type="button" value="+" onclick="myFunction(value)">+</button><br>
+<button type="button" value="4" onclick="myFunction(value)">4</button>
+<button type="button" value="5" onclick="myFunction(value)">5</button>
+<button type="button" value="6" onclick="myFunction(value)">6</button>
+<button type="button" value="-" onclick="myFunction(value)">-</button><br>
+<button type="button" value="7" onclick="myFunction(value)">7</button>
+<button type="button" value="8" onclick="myFunction(value)">8</button>
+<button type="button" value="9" onclick="myFunction(value)">9</button>
+<button type="button" value="*" onclick="myFunction(value)">*</button><br>
+<button type="button" value="C" onclick="xoaGiatri()">C</button>
+<button type="button" value="0" onclick="myFunction(value)">0</button>
+<button type="button" value="=" onclick="tinhGiatri()">=</button>
+<button type="button" value="/" onclick="myFunction(value)">/</button>
+<script>
+    let str ="";
+function myFunction(value) {
+    let ketQua = document.getElementById('ketQua');
+    str += value;
+    ketQua.value = str;
+}
+function tinhGiatri() {
+    let ketQua = document.getElementById('ketQua')
+    ketQua.value = eval(ketQua.value);
+
+}
+function xoaGiatri() {
+    let ketQua = document.getElementById('ketQua')
+    ketQua.value = "";
+}
+</script>
+</body>
+</html>
