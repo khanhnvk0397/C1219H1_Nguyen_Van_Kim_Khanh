@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameCustomer = "Nguyen Trung Thanh";
+    let idCard = "12347847";
+    let birthdayCustomer = "02/10/1999";
+    let emailCustomer = "trungthanh@gmail.com";
+    let addressCustomer = "Da Nang";
+    let typeCustomer = "Diamond";
+    let discount = 10;
+    let pax = 2;
+    let typeRoom = "Business";
+    let rentDays = 10;
+    let roomClass = "Villa";
+    let totalPay =500 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+    let choose = prompt(
+        "1 .Show information Customer \n " +
+        "2. Edit Information Customer \n" +
+        "3.Show the Amount to be Paid After Discount \n"       )
+    switch(choose){
+        case "1":
+            alert("Information Of Customer: \n" +
+            "\n Name: " + nameCustomer +
+            "\n Id Card: " + idCard +
+            "\n Birthday: " + birthdayCustomer +
+            "\n Email Customer:  " + emailCustomer +
+            "\n Address Customer: " +addressCustomer +
+            "\n Type Customer: " + typeCustomer +
+            "\n Discount: " + discount +
+            "\n Number of people: " + pax +
+            "\n Type Room: " + typeRoom +
+            "\n Rent Days: " + rentDays +
+            "\n Type Service: " + roomClass
+            );
+            break;
+        case "2":
+            let chooseEdit = prompt(
+                " Choose Information Customer you want Edit : \n" +
+                "1.Name: " + nameCustomer  +
+                "\n 2.Id Card: " + idCard  +
+                "\n 3. Birthday: " + birthdayCustomer +
+                "\n 4. Email Customer:  " + emailCustomer  +
+                "\n 5. Address Customer: " +addressCustomer  +
+                "\n 6. Type Customer: " + typeCustomer  +
+                "\n 7. Discount: " + discount  +
+                "\n 8. Number of people: " + pax  +
+                "\n 9. Type Room: " + typeRoom  +
+                "\n 10. Rent Days: " + rentDays  +
+                "\n 11. Type Service: " + roomClass
+                )
+                switch(chooseEdit){
+                    case  "1":
+                        nameCustomer = prompt("Enter name customer you want edit: ")
+                        break;
+                    case  "2":
+                        idCard =prompt("Enter Id Card Customer you want edit:  ")
+                        break;
+                    case  "3":
+                        emailCustomer = prompt("Enter Email Customer you want edit:")
+                        break;
+                    case  "4":
+                        birthdayCustomer = prompt("Enter Birthday Customer you want edit:(dd/MM/) ")
+                        break;
+                    case  "5":
+                        addressCustomer = prompt("Enter Address Customer you want edit: ")
+                        break;
+                    case  "6":
+                        typeCustomer = prompt("Enter type Customer you want edit: ")
+                        break;
+                    case  "7":
+                        discount = prompt(" Enter Discount you want edit: ")
+                        break;
+                    case  "8":
+                        pax = prompt("Enter Number people you want edit: ")
+                        break;
+                    case  "9":
+                        typeRoom = prompt(" Enter type Room you want edit: ")
+                        break;
+                    case  "10":
+                        rentDays = prompt( "Enter rent Days you want edit: ")
+                        break;
+                    case  "11":
+                        roomClass = prompt("Enter type Service you want edit:")
+                        break;
+                     default: alert("Faild !!")
+                        break;
+                }
+            alert("Information Of Customer: \n" +
+            "Name: " + nameCustomer +
+            "Id Card: " + idCard +
+            "\n Birthday: " + birthdayCustomer +
+            "\n Email Customer:  " + emailCustomer +
+            "\n Address Customer: " +addressCustomer +
+            "\n Type Customer: " + typeCustomer +
+            "\n Discount: " + discount +
+            "\n Number of people: " + pax +
+            "\n Type Room: " + typeRoom +
+            "\n Rent Days: " + rentDays +
+            "\n Type Service: " + roomClass +
+            "\n Total Pay: " + totalPay)
+            case "3":
+                let moneyPerday = 0 ;
+                if (roomClass === 'Villa'){
+                    moneyPerday = 500;
+                }else  if (roomClass === 'House'){
+                    moneyPerday = 500;
+                }else {
+                    moneyPerday = 100;
+                }
+                let discountCondition = 0;
+                let currentYear = new Date().getFullYear();
+                let birthday = new Date(birthdayCustomer).getFullYear();
+                let ageCustomer = currentYear - birthday;
+                if (addressCustomer === 'Da Nang'){
+                    discountCondition +=20;
+                    if (ageCustomer > 30){
+                        discountCondition += 2;
+                    }else  if (ageCustomer>=20){
+                        discountCondition +=1
+                    }
+                }else  if (addressCustomer ==='Hue'){
+                    discountCondition += 10;
+                }else if(addressCustomer ==='Quang Nam'){
+                    discountCondition += 5;
+                }
+                if (rentDays > 7){
+                    discountCondition += 30;
+                }else  if (rentDays >= 5){
+                    discountCondition += 20;
+                }else if (rentDays >= 2){
+                    discountCondition += 10
+                }
+                if (typeCustomer == 'Diamond'){
+                    discountCondition += 15;
+                }else if (typeCustomer =='Platinum'){
+                    discountCondition += 10;
+                }else if (typeCustomer == 'Gold'){
+                    discountCondition +=5;
+                }if (typeCustomer == 'Silver'){
+                    discountCondition += 2;
+                }
+                let totalPay = moneyPerday * rentDays*(1 - discount/100);
+                totalPay = totalPay - discountCondition;
+                alert("Total pays after discount conditiom: " +totalPay);
+                break
+            default: alert("Fail!!!")
+                break;
+    }
+
+
+</script>
+</body>
+</html>
