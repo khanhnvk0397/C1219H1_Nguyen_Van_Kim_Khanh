@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("nhap day so: "));
+
+    ketQuaSNT(numbers)
+    function kiemTraSNT(so) {
+        for (let n=2;n<so;n++){
+            if (so % n == 0 ){
+                return false;
+            }
+            return true;
+        }
+    }
+    function ketQuaSNT(m) {
+        let counts = 0;
+        let n = 2;
+        let str = " ";
+        while (counts < m ){
+            if (kiemTraSNT(n)){
+                str += n + " ";
+                counts++;
+            }
+        n++;
+        }
+        document.write(str);
+    }
+
+
+</script>
+</body>
+</html>
