@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let nameCustomer = prompt("Enter name Customer:");
+    let idCard ;
+    let birthdayCustomer;
+    let emailCustomer ;
+    let checkValidate = false;
+    // let addressCustomer = prompt("Enter address Customer: ");
+    // let typeCustomer = prompt("Enter type Customer: ");
+    // let discount = prompt("Enter Discount: ");
+    // let pax = prompt("Enter Number of people: ");
+    // let typeRoom = prompt("Enter Type Room: ");
+    // let rentDays = prompt("Enter Rent Day: ");
+    // let roomClass = prompt("Enter room class: ");
+    // let totalPays;
+    do {
+        checkValidate = true;
+        idCard = prompt("Enter Id Card Customer: ");
+        if (idCard !== parseInt(idCard)){
+            alert("Id card is Invalid !!! Please Try Again.");
+        }
+        idCard = parseInt(prompt("Enter Id Card Customer: "));
+    }while (!checkValidate)
+    do {
+        checkValidate = false;
+        birthdayCustomer = prompt("Enter birthday Customer:(dd/MM/YYYY) ");
+        if (birthdayCustomer.charAt(2)!=='/'||birthdayCustomer.charAt(5)!== '/'){
+            alert("Birthday is Invalid !!! Please Try Again.");
+            continue;
+        }
+        let day = birthdayCustomer.substring(0,2);
+        let month = birthdayCustomer.substring(3,5);
+        let  year = birthdayCustomer.substring(6,10);
+        if (!isNaN(day) && !isNaN(month) && !isNaN(year)){
+            day = Number.parseFloat(day);
+            month = Number.parseFloat(month);
+            year = Number.parseFloat(year);
+            if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                if (day > 0 && day < 32 && month < 13 && month > 0 && year > 1940 && year < 2020) {
+                    checkValidate = true;
+                }
+            }
+        }
+        if (!checkValidate){
+            alert("Birthday is invalid !!! Please Try Again.");
+        }
+
+
+    }while (!checkValidate);
+    do {
+        checkValidate = true;
+        emailCustomer = prompt("Enter email Customer: ");
+        let countDoc = 0;
+        let countAt = 0;
+        for ( let i = 0; i < emailCustomer; i++){
+            if (emailCustomer.charAt(i) === "@"){
+                countDoc ++;
+            }
+            if (emailCustomer.charAt(i) ==="."){
+                countDoc ++;
+            }
+            if (countAt !==1 || countDoc < 1){
+                checkValidate = false;
+                alert("Email is Invalid !!! Please Try Again");
+            }
+        }
+    }while (!checkValidate);
+    alert("Information Of Customer: " +
+    //     "Name: " + nameCustomer +
+        "\n Id Card: " + idCard +
+        "\n Birthday: " + birthdayCustomer +
+        "\n Email Customer:  " + emailCustomer
+    //     "\n Address Customer: " +addressCustomer +
+    //     "\n Type Customer: " + typeCustomer +
+    //     "\n Discount: " + discount +
+    //     "\n Number of people: " + pax +
+    //     "\n Type Room: " + typeRoom +
+    //     "\n Rent Days: " + rentDays +
+    //     "\n Type Service: " + roomClass +
+    //     "\n Total Pay: " + totalPays
+    //
+    )
+</script>
+</body>
+</html>
