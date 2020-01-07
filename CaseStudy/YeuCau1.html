@@ -17,16 +17,16 @@
     let typeRoom = prompt("Enter Type Room: ");
     let rentDays = prompt("Enter Rent Day: ");
     let roomClass = prompt("Enter room class: ");
-    let totalPay;
+    let totalPays;
     if (typeRoom =='Villa'){
 
-        totalPay = 500 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+        totalPays = 500 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
     }
     if (typeRoom == "Home"){
-        totalPay = 300 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+        totalPays = 300 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
     }
     if (typeRoom == "Room"){
-        totalPay = 100 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
+        totalPays = 100 * Number.parseInt(rentDays) * (1 - Number.parseFloat(discount))/100;
     }
     alert("Information Of Customer: \n" +
         "Name: " + nameCustomer +
@@ -40,7 +40,7 @@
         "\n Type Room: " + typeRoom +
         "\n Rent Days: " + rentDays +
         "\n Type Service: " + roomClass +
-        "\n Total Pay: " + totalPay
+        "\n Total Pay: " + totalPays
 
     )
 
