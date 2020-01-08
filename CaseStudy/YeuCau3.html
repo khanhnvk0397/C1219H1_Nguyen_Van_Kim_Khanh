@@ -7,9 +7,10 @@
 <body>
 <script>
     // let nameCustomer = prompt("Enter name Customer:");
+    let emailCustomer ;
     let idCard ;
     let birthdayCustomer;
-    let emailCustomer ;
+    let discounts;
     let  rentDays;
     let pax;
     let checkValidate = false;
@@ -19,6 +20,24 @@
     // let typeRoom = prompt("Enter Type Room: ");
     // let roomClass = prompt("Enter room class: ");
     // let totalPays;
+    do {
+        checkValidate = true;
+        emailCustomer = prompt("Enter email Customer: ");
+        let countDoc = 0;
+        let countAt = 0;
+        for (let i = 0; i < emailCustomer; i++) {
+            if (emailCustomer.charAt(i) === "@") {
+                countDoc++;
+            }
+            if (emailCustomer.charAt(i) === ".") {
+                countDoc++;
+            }
+            if (countAt !== 1 || countDoc < 1) {
+                checkValidate = false;
+                alert("Email is Invalid !!! Please Try Again");
+            }
+        }
+    } while (!checkValidate);
 
     do {
         checkValidate = false;
@@ -48,48 +67,40 @@
         let month = birthdayCustomer.substring(3,5);
         let  year = birthdayCustomer.substring(6,10);
         if (!isNaN(day) && !isNaN(month) && !isNaN(year)){
-            day = Number.parseFloat(day);
-            month = Number.parseFloat(month);
-            year = Number.parseFloat(year);
-            if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
-                if (day > 0 && day < 32 && month < 13 && month > 0 && year > 1940 && year < 2020) {
-                    checkValidate = true;
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                    if (day > 0 && day < 32 && month < 13 && month > 0 && year > 1940 && year < 2020) {
+                        checkValidate = true;
+                    }
                 }
             }
-        }
-        if (!checkValidate){
-            alert("Birthday is invalid !!! Please Try Again.");
-        }
+            if (!checkValidate){
+                alert("Birthday is invalid !!! Please Try Again.");
+            }
 
 
-    }while (!checkValidate);
-    do {
+        }while (!checkValidate);
+        do {
+            checkValidate = true;
+            discounts = prompt("Enter Discount: ");
+            if (discounts>=0 && Number.parseInt(discounts)){
+                checkValidate = true;
+            }else {
+                alert(" Discounts is Invalid !!! Please Try Again");
+        }
+        }while (!checkValidate)
+        do {
         checkValidate = false;
         pax = prompt("Enter Number of people: ");
         if (pax > 0 && Number.parseInt(pax)) {
             checkValidate = true;
 
         }
-    }
+        }
         while (!checkValidate)
-            do {
-                checkValidate = true;
-                emailCustomer = prompt("Enter email Customer: ");
-                let countDoc = 0;
-                let countAt = 0;
-                for (let i = 0; i < emailCustomer; i++) {
-                    if (emailCustomer.charAt(i) === "@") {
-                        countDoc++;
-                    }
-                    if (emailCustomer.charAt(i) === ".") {
-                        countDoc++;
-                    }
-                    if (countAt !== 1 || countDoc < 1) {
-                        checkValidate = false;
-                        alert("Email is Invalid !!! Please Try Again");
-                    }
-                }
-            } while (!checkValidate);
+
         do {
             checkValidate = false;
             rentDays = prompt("Enter Rent Day: ");
@@ -99,9 +110,10 @@
 
         } while (!checkValidate)
         alert("Information Of Customer: " +
+            "\n Email Customer:  " + emailCustomer +
             "\n Id Card: " + idCard +
             "\n Birthday: " + birthdayCustomer +
-            "\n Email Customer:  " + emailCustomer +
+            "\n Discounts: " + discounts +
             "\n Number of people: " + pax +
 
             "\n Rent Days: " + rentDays
