@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    // let nameCustomer = prompt("Enter name Customer:");
+    let nameCustomer = prompt("Enter name Customer:");
     let emailCustomer ;
     let idCard ;
     let birthdayCustomer;
@@ -20,6 +20,7 @@
     // let typeRoom = prompt("Enter Type Room: ");
     // let roomClass = prompt("Enter room class: ");
     // let totalPays;
+
     do {
         checkValidate = true;
         emailCustomer = prompt("Enter email Customer: ");
@@ -53,7 +54,7 @@
         else {
             alert("Id Card is Invalid!!! Pleasse Try Again.")
         }
-        
+
     }while (!checkValidate)
 
     do {
@@ -110,6 +111,7 @@
 
         } while (!checkValidate)
         alert("Information Of Customer: " +
+            "\n Name Customer: "+ nameCustomer +
             "\n Email Customer:  " + emailCustomer +
             "\n Id Card: " + idCard +
             "\n Birthday: " + birthdayCustomer +
@@ -118,6 +120,7 @@
 
             "\n Rent Days: " + rentDays
         )
+
 
 
 
