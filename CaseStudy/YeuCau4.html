@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <input type="text" id="txtValue" />-->
+<!--    <input type="button" id="addCustomer" value="add" onclick="addressCustomers()" />-->
+<!--    <input type="button" id="deleteCustomer" value="delete" onclick="deleteCustomers()" />-->
+<script>
+    let arrayNameCustomer = [];
+    let choose = prompt(
+        "1. Add Customer \n " +
+        "2. Delete Customer \n"
+    );
+    switch (choose) {
+        case "1":
+            let arrLength = prompt("Enter number of customer you want to add:  ");
+            for (let i = 0; i < arrLength; i++){
+                arrayNameCustomer.push(prompt( "Enter name Customer: " + (i+1)));
+            }
+            var result = " ";
+            for (let i = 0; i < arrayNameCustomer.length; i++){
+                result += "\n" + (i+1) + ". " +arrayNameCustomer[i];
+            }
+            alert(result);
+            arrayNameCustomer.sort();
+            arrayNameCustomer.reverse();
+            result = " ";
+            for (let i = 0; i<arrayNameCustomer.length;i++){
+                result+="\n"+ (i+1)+ ". " +arrayNameCustomer[i];
+            }
+            alert(result);
+            break;
+        case "2":
+            arrayNameCustomer[0] = "Tung";
+            arrayNameCustomer[1] = "Minh";
+            arrayNameCustomer[2] = "Hung";
+            arrayNameCustomer[3] = "Huong";
+            arrayNameCustomer[4] = "Linh";
+            arrayNameCustomer[5] = "Phuong";
+            arrayNameCustomer[6] = "Dung";
+            arrayNameCustomer[7] = "Nguyen";
+            arrayNameCustomer[8] = "Hoang";
+            arrayNameCustomer[9] = "Quang";
+            var result = " ";
+            for (let i = 0; i<arrayNameCustomer.length;i++){
+                result += "\n" + (i+1)+ ". " + arrayNameCustomer[i];
+            }
+            let indexDelete = prompt("Choose Customer you want to delete: " +result);
+            arrayNameCustomer.splice(Number.parseInt(indexDelete)-1, 1);
+            let arrCustomerAfterDelete = " ";
+            for (let i = 0; i<arrayNameCustomer.length;i++){
+                arrCustomerAfterDelete += "\n" + (i+1)+ ". " + arrayNameCustomer[i];
+            }
+            alert("List customer after Delete: "+arrCustomerAfterDelete);
+
+            break;
+        default:alert("Fail!!!")
+            break
+    }
+    alert(nameCustomer)
+
+
+</script>
+</body>
+</html>
