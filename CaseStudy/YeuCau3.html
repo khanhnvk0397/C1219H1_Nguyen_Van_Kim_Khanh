@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let nameCustomer = prompt("Enter name Customer:");
+
     let emailCustomer ;
     let idCard ;
     let birthdayCustomer;
@@ -14,12 +14,55 @@
     let  rentDays;
     let pax;
     let checkValidate = false;
-    // let addressCustomer = prompt("Enter address Customer: ");
-    // let typeCustomer = prompt("Enter type Customer: ");
-    // let discount = prompt("Enter Discount: ");
-    // let typeRoom = prompt("Enter Type Room: ");
-    // let roomClass = prompt("Enter room class: ");
-    // let totalPays;
+    let nameCustomer = prompt("Enter name Customer:");
+    let nameStandardiezd = " ";
+    let addressCustomer = prompt("Enter address Customer: ");
+    let addressStandardiezd = " " ;
+
+    let typeCustomer = prompt("Enter type Customer: ");
+    let typeCustomerfile;
+
+
+    typeCustomer = typeCustomer.trim().toLocaleLowerCase();
+    for (let i = 0 ; i<typeCustomer.length;i++){
+        if (typeCustomer.charAt(i)===" "||typeCustomer.charAt(i+1)===" "){
+            continue;
+        }
+        if (i===0||typeCustomer.charAt(i-1)===" "){
+            typeCustomerfile += typeCustomer.charAt(i).toUpperCase();
+            continue;
+        }
+        typeCustomerfile += typeCustomer.charAt(i);
+    }
+    typeCustomer = typeCustomerfile;
+    addressCustomer = addressCustomer .trim().toLocaleLowerCase();
+    for (let i = 0;i <addressCustomer.length;i++){
+        if (addressCustomer.charAt(i)===" "||addressCustomer.charAt(i+1)=== " "){
+            continue;
+        }
+        if (i=== 0 || addressCustomer.charAt(i-1)===" "){
+            addressStandardiezd += addressCustomer.charAt(i-1).toUpperCase();
+            continue;
+        }
+        addressStandardiezd +=addressCustomer.charAt(i);
+    }
+      addressCustomer =  addressStandardiezd ;
+
+
+    nameCustomer = nameCustomer.trim().toLocaleLowerCase();
+    for (let i = 0; i<nameCustomer.length;i++){
+        if (nameCustomer.charAt(i)===" " && nameCustomer.charAt(i+1)===" "){
+            continue;
+        }
+        if (i=== 0|| nameCustomer.charAt(i - 1)===" " ){
+            nameStandardiezd += nameCustomer.charAt(i).toUpperCase();
+            continue;
+        }
+        nameStandardiezd +=nameCustomer.charAt(i);
+    }
+    nameCustomer = nameStandardiezd;
+
+
 
     do {
         checkValidate = true;
@@ -113,6 +156,8 @@
         alert("Information Of Customer: " +
             "\n Name Customer: "+ nameCustomer +
             "\n Email Customer:  " + emailCustomer +
+            "\n Address Customer: " +addressCustomer +
+            "\n Type Customer: " + typeCustomer +
             "\n Id Card: " + idCard +
             "\n Birthday: " + birthdayCustomer +
             "\n Discounts: " + discounts +
