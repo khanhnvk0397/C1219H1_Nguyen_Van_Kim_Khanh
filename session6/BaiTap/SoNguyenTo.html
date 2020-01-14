@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function isPrimeNumber(max)
+    {
+        let number  = [], i, j, primes = [];
+        for (i = 2; i <= max; ++i)
+        {
+            if (!number [i])
+            {
+                primes.push(i);
+                for (j = i << 1; j <= max; j += i)
+                {
+                    number[j] = true;
+                }
+            }
+        }
+        return primes;
+    }
+    console.log(isPrimeNumber(100));
+</script>
+</body>
+</html>
